@@ -30,4 +30,13 @@ public class ReadWriteLockCashe {
         }
     }
 
+    public static final void clear(){
+        w.lock();
+        try {
+            map.clear();
+        }finally {
+            w.unlock();
+        }
+    }
+
 }

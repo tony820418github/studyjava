@@ -13,11 +13,13 @@ public class LockSupportTest {
                     sum+=i;
                 }
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                LockSupport.park();
+               // LockSupport.unpark(Thread.currentThread());
+                LockSupport.park(new Object());
+
                 System.out.println(sum);
             }
         });
@@ -26,12 +28,12 @@ public class LockSupportTest {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 System.out.println("unpark");
-                LockSupport.unpark(Thread.currentThread());
+                LockSupport.unpark(A);
             }
         });
 
