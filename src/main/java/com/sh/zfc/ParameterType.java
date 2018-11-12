@@ -11,6 +11,8 @@ public class ParameterType {
         System.out.println(first);
     }
 
+
+
     public static void main(String[] args) {
         Object a = new Object();
         ArrayList<Object> alist= new ArrayList<Object>();

@@ -1,7 +1,8 @@
 package com.sh.zfc.arithmetic.string;
 
 /*
-看毛片算法
+看毛片算法,zfc1
+zfc2
  */
 public class KMP {
 
